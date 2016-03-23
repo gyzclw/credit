@@ -1,5 +1,4 @@
 define(['../app'], function() {
-
   return angular.module('MyControllers', [])
     .controller('ProvinceCtrl', function(messages) {
       var vm = this;

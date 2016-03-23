@@ -21,6 +21,6 @@ require.config({
 
 });
 
-require(['app', 'controllers/controllers', 'services/services'], function($document) {
+require(['app', 'controllers/controllers', 'services/services'], function ($document) {
   angular.bootstrap(document.getElementsByTagName('body')[0], ['app']);
 });
