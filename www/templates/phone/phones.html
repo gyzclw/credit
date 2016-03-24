@@ -1,91 +1,90 @@
 <ion-view view-title="开卡">
   <link href="../../lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <ion-content>
-    <ion-scroll zooming="true" direction="xy">
-        <div>
-          <h4>
-            请您选择领卡网点:
-          </h4>
-          <div class="places" ng-controller="ProvinceCtrl as pro">
-            <label class="item item-select">
-              <select>
-                <option disabled="disabled" selected>省/自治区/直辖市</option>
-                <option ng-repeat="data in pro.messages.provinces">{{data}}</option>
-              </select>
-            </label>
-          </div>
-          <div class="places" ng-controller="ProvinceCtrl as pro">
-            <label class="item item-select">
-              <select>
-                <option disabled="disabled" selected>地级市</option>
-                <option ng-repeat="data in pro.messages.cities">{{data}}</option>
-              </select>
-            </label>
-          </div>
-          <div class="branch_one" ng-controller="ProvinceCtrl as pro">
-            <label class="item item-select">
-              <select>
-                <option disabled="disabled" selected></option>
-                <option ng-repeat="data in pro.messages.cities">{{data}}</option>
-              </select>
-            </label>
-          </div>
-          <div class="branch_two" ng-controller="ProvinceCtrl as pro">
-            <label class="item item-select">
-              <select>
-                <option disabled="disabled" selected>网点名称</option>
-                <option ng-repeat="data in pro.messages.cities">{{data}}</option>
-              </select>
-            </label>
-          </div>
+    <div>
+      <h4>
+        请您选择领卡网点:
+      </h4>
+      <div class="places" ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>省/自治区/直辖市</option>
+            <option ng-repeat="data in pro.messages.provinces">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="places" ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>地级市</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="branch_one" ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected></option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <div class="branch_two" ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>网点名称</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
 
-        </div>
+    </div>
 
-        <div ng-controller="CarouselCtrl as car">
+    <div ng-controller="CarouselCtrl as car">
 
-          <h4>请您选择信用卡产品</h4>
+      <h4>请您选择信用卡产品</h4>
 
-          <ion-slide-box class="slide-box" on-slide-changed="slideHasChanged($index)" auto-play="true" slide-interval="3000" show-pager="false">
-            <ion-slide class="slide-box__image" ng-repeat="slide in car.slides track by slide.id">
-              <span aria-hidden="true" class="glyphicon glyphicon-chevron-left" ng-click="car.slidePrevious()"></span>
-              <img style="width: 80%" ng-src="{{slide.image}}">
-              <span aria-hidden="true" class="glyphicon glyphicon-chevron-right" ng-click="car.slideNext()"></span>
-              <h4 style="margin: 10px">Slide
-                {{slide.id+1}}</h4>
-            </ion-slide>
+      <ion-slide-box class="slide-box" on-slide-changed="slideHasChanged($index)" auto-play="true" slide-interval="3000"
+                     show-pager="false">
+        <ion-slide class="slide-box__image" ng-repeat="slide in car.slides track by slide.id">
+          <span aria-hidden="true" class="glyphicon glyphicon-chevron-left" ng-click="car.slidePrevious()"></span>
+          <img style="width: 80%" ng-src="{{slide.image}}">
+          <span aria-hidden="true" class="glyphicon glyphicon-chevron-right" ng-click="car.slideNext()"></span>
+          <h4 style="margin: 10px">Slide
+            {{slide.id+1}}</h4>
+        </ion-slide>
 
-          </ion-slide-box>
+      </ion-slide-box>
 
-        </div>
-        <div>
-          <div class="places">
-            <label class="item item-input">
-              <input type="text" placeholder="会员卡名称">
-            </label>
-          </div>
-          <div class="places">
-            <label class="item item-input">
-              <input type="text" placeholder="会员卡编号">
-            </label>
-          </div>
-        </div>
+    </div>
+    <div>
+      <div class="places">
+        <label class="item item-input">
+          <input type="text" placeholder="会员卡名称">
+        </label>
+      </div>
+      <div class="places">
+        <label class="item item-input">
+          <input type="text" placeholder="会员卡编号">
+        </label>
+      </div>
+    </div>
 
-        <div>
-          <div class="places">
-            <label class="item item-input">
-              <input type="tel" placeholder="手机号">
-            </label>
-          </div>
-          <div class="places" ng-controller="registerCtrl as register">
-            <button class="button" ng-class="register.paraclass" ng-bind="register.paracont">获取验证码</button>
+    <div>
+      <div class="places">
+        <label class="item item-input">
+          <input type="tel" placeholder="手机号">
+        </label>
+      </div>
+      <div class="places" ng-controller="registerCtrl as register">
+        <button class="button" ng-class="register.paraclass" ng-bind="register.paracont">获取验证码</button>
 
-          </div>
-          <div ng-controller="CheckBoxCtrl as check">
-            <ion-checkbox ng-model="check.filter.blue" ng-click="check.hello()">本人已经阅读相关</ion-checkbox>
-            <a href="phones.html">查看详细条款</a>
-          </div>
-          <a class="button button-block button-calm" href="#/phone/second">下一步</a>
-        </div>
-    </ion-scroll>
-    </ion-content>
-  </ion-view>
+      </div>
+      <div ng-controller="CheckBoxCtrl as check">
+        <ion-checkbox ng-model="check.filter.blue" ng-click="check.hello()">本人已经阅读相关</ion-checkbox>
+        <a href="phones.html">查看详细条款</a>
+      </div>
+      <a class="button button-block button-calm" href="#/phone/second">下一步</a>
+    </div>
+  </ion-content>
+</ion-view>

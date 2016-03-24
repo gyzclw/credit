@@ -1,16 +1,102 @@
 <ion-view>
   <ion-content>
     <div>
-      <h1>请您填写个人信息</h1>
-      <div >	
+      <h4>请您填写个人信息</h4>
+      <div>
+        <label class="item item-input">
+          <input type="text" placeholder="中文姓名">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="姓名拼音">
+        </label>
+        <div ng-controller="CheckBoxCtrl as check">
+          <ion-checkbox ng-model="check.filter.blue" ng-click="check.hello()">身份证</ion-checkbox>
+        </div>
+        <label class="item item-input">
+          <input type="number" placeholder="身份证号码">
+        </label>
+      </div>
       <label class="item item-input">
-	<input type="text" placeholder="">
+        <input type="text" placeholder="出生日期">
       </label>
 
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>教育状况</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
       </div>
 
-    </div>
-    
-  </ion-content>
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>婚姻状况</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
 
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>现住址居住年限</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>住宅状况</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <label class="item item-input">
+        <input type="text" placeholder="个人年收入">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="单位全称及部门">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="现单位工作年限">
+      </label>
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>职业</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>行业种类</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>职务</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <div ng-controller="ProvinceCtrl as pro">
+        <label class="item item-select">
+          <select>
+            <option disabled="disabled" selected>职称</option>
+            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+          </select>
+        </label>
+      </div>
+      <a class="button button-block button-calm" href="#/phone/three">下一步</a>
+    </div>
+  </ion-content>
 </ion-view>

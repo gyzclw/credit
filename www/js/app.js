@@ -45,7 +45,11 @@ define(['app', 'ngAnimate', 'ionic', 'ngBootstrap'], function () {
         .state('second', {
           url: '/phone/second',
           templateUrl: 'templates/phone/phone_second.html'
-        });
+        })
+        .state('three', {
+          url: '/phone/three',
+          templateUrl: 'templates/phone/phone_three.html'
+        });;
       // if none of the above states are matched, use this as the fallback
       $urlRouterProvider.otherwise('/login');
     });
