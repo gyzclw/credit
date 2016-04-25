@@ -16,7 +16,7 @@ require.config({
     },
     ngBootstrap: {
       deps: ['ngTouch']
-    }
+     }
   }
 
 });

@@ -1,1 +1,134 @@
-<p>Hello, i am three;</p>
+<div class="bar bar-header bar-energized " style="background-color: #00D3C4">
+    <h1 class="title">信用卡开卡</h1>
+</div>
+<ion-view>
+    <ion-content>
+        <div>
+            <div>
+                <h4>请您填写基本信息</h4>
+                <h4>现居住地详细地址</h4>
+                <div class="place_three">
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                    <select>
+                    <option disabled="disabled" selected>省</option>
+                    <option ng-repeat="data in pro.messages.provinces">{{data}}</option>
+              </select>
+            </label>
+                    </div>
+                </div>
+                <div class="place_three">
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                    <select>
+                    <option disabled="disabled" selected>市</option>
+                    <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+              </select>
+            </label>
+                    </div>
+                </div>
+                <div class="place_three">
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                    <select>
+                    <option disabled="disabled" selected>县／区</option>
+                    <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+              </select>
+            </label>
+                    </div>
+                </div>
+                <label class="item item-input">
+                    <input type="text" placeholder="详细住址">
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="邮编(自动返填)">
+                </label>
+                <h4>单位详细地址</h4>
+                <div class="place_three">
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                            <select>
+                                <option disabled="disabled" selected>省</option>
+                                <option ng-repeat="data in pro.messages.provinces">{{data}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="place_three">
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                            <select>
+                                <option disabled="disabled" selected>市</option>
+                                <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="place_three">
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                            <select>
+                                <option disabled="disabled" selected>县／区</option>
+                                <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <label class="item item-input">
+                    <input type="text" placeholder="详细住址">
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="邮编(自动返填)">
+                </label>
+                <div class="places" style="width:30%">
+                    <label class="item item-input">
+                    <input type="text" placeholder="单位电话区号(自动返填)">
+                    </label>
+                </div>
+                <div class="places" style="width:70%">
+                    <label class="item item-input">
+                      <input type="text" size=13  placeholder="号码">
+                   </label>
+                </div>
+                <label class="item item-input">
+                    <input type="text" placeholder="联系人姓名">
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="联系人手机">
+                </label>
+                <div>
+                    <div ng-controller="ProvinceCtrl as pro">
+                        <label class="item item-select">
+                            <select>
+                                <option disabled="disabled" selected>与联系人的关系</option>
+                                <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <label class="item item-input">
+                    <input type="text" placeholder="电子邮箱" />
+                </label>
+
+
+                <div class="places">
+                    <h4>对账单发送方式</h4>
+                </div>
+                <div class="places">
+                    <div ng-controller="CheckBoxCtrl as check">
+                        <ion-checkbox ng-model="check.filter.blue" ng-click="check.hello()">电子邮箱</ion-checkbox>
+                    </div>
+                </div>
+
+                <label class="item item-input">
+                    <input type="text" placeholder="推荐人姓名" />
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="推荐人手机号" />
+                </label>
+
+            </div>
+        </div>
+        <a class="button button-block button-calm" href="#/phone/fourth" style="background-color: #00D3C4">下一步</a>
+    </ion-content>
+</ion-view>

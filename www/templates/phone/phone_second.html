@@ -1,3 +1,6 @@
+  <div class="bar bar-header bar-energized " style="background-color: #00D3C4">
+    <h1 class="title">信用卡开卡</h1>
+    </div>
 <ion-view>
   <ion-content>
     <div>
@@ -19,42 +22,29 @@
       <label class="item item-input">
         <input type="text" placeholder="出生日期">
       </label>
-
-      <div ng-controller="ProvinceCtrl as pro">
+      <div ng-controller="BasemessCtrl as base">
         <label class="item item-select">
           <select>
             <option disabled="disabled" selected>教育状况</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+            <option ng-repeat="data in base.basemessages.education">{{data}}</option>
           </select>
         </label>
       </div>
-
-      <div ng-controller="ProvinceCtrl as pro">
+      <div ng-controller="BasemessCtrl as base">
         <label class="item item-select">
           <select>
             <option disabled="disabled" selected>婚姻状况</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+            <option ng-repeat="data in base.basemessages.marriage">{{data}}</option>
           </select>
         </label>
       </div>
+       <label class="item item-input">
+        <input type="text" placeholder="现居住年限">
+      </label>
+       <label class="item item-input">
+        <input type="text" placeholder="住宅状况">
+      </label>
 
-      <div ng-controller="ProvinceCtrl as pro">
-        <label class="item item-select">
-          <select>
-            <option disabled="disabled" selected>现住址居住年限</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
-          </select>
-        </label>
-      </div>
-
-      <div ng-controller="ProvinceCtrl as pro">
-        <label class="item item-select">
-          <select>
-            <option disabled="disabled" selected>住宅状况</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
-          </select>
-        </label>
-      </div>
       <label class="item item-input">
         <input type="text" placeholder="个人年收入">
       </label>
@@ -64,39 +54,39 @@
       <label class="item item-input">
         <input type="text" placeholder="现单位工作年限">
       </label>
-      <div ng-controller="ProvinceCtrl as pro">
+      <div ng-controller="BasemessCtrl as base">
         <label class="item item-select">
           <select>
             <option disabled="disabled" selected>职业</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+            <option ng-repeat="data in base.basemessages.job">{{data}}</option>
           </select>
         </label>
       </div>
-      <div ng-controller="ProvinceCtrl as pro">
+      <div ng-controller="BasemessCtrl as base">
         <label class="item item-select">
           <select>
             <option disabled="disabled" selected>行业种类</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+            <option ng-repeat="data in base.basemessages.industry_category">{{data}}</option>
           </select>
         </label>
       </div>
-      <div ng-controller="ProvinceCtrl as pro">
+      <div ng-controller="BasemessCtrl as base">
         <label class="item item-select">
           <select>
             <option disabled="disabled" selected>职务</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+            <option ng-repeat="data in base.basemessages.post">{{data}}</option>
           </select>
         </label>
       </div>
-      <div ng-controller="ProvinceCtrl as pro">
+      <div ng-controller="BasemessCtrl as base">
         <label class="item item-select">
           <select>
             <option disabled="disabled" selected>职称</option>
-            <option ng-repeat="data in pro.messages.cities">{{data}}</option>
+            <option ng-repeat="data in base.basemessages.professional">{{data}}</option>
           </select>
         </label>
       </div>
-      <a class="button button-block button-calm" href="#/phone/three">下一步</a>
+      <a class="button button-block button-calm" href="#/phone/three" style="background-color: #00D3C4">下一步</a>
     </div>
   </ion-content>
 </ion-view>
